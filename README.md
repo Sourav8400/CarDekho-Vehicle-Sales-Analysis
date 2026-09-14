@@ -83,3 +83,24 @@ Python and Pandas were used to prepare the dataset for analysis.
 
 ```text
 Vehicle Age = 2026 - Manufacturing Year
+```
+**Selling Price in Lakh:**
+
+
+
+```text
+Selling Price (Lakh) = Selling Price / 100000
+```
+
+## 5. Key Features / Highlights
+
+- Performed data cleaning and preprocessing using Python
+- Conducted exploratory data analysis to identify important patterns
+- Used SQL queries to analyze vehicle pricing, brands, fuel types, transmission, and ownership
+- Developed an interactive Power BI dashboard
+- Created KPI cards for key business metrics
+- Analyzed the top vehicle brands by number of listings
+- Analyzed vehicle distribution by fuel type
+- Studied the relationship between vehicle age and selling price
+- Added interactive slicers for Year, Brand, Fuel Type, Transmission, Owner, and Seller Type
+- Designed a user-friendly dashboard for data-driven decision making
