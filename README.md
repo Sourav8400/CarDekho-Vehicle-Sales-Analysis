@@ -104,3 +104,129 @@ Selling Price (Lakh) = Selling Price / 100000
 - Studied the relationship between vehicle age and selling price
 - Added interactive slicers for Year, Brand, Fuel Type, Transmission, Owner, and Seller Type
 - Designed a user-friendly dashboard for data-driven decision making
+
+## 6. SQL Analysis
+
+SQL was used to perform analytical queries on the cleaned vehicle dataset.
+
+### Example SQL Queries
+
+```sql
+-- Total number of vehicles
+SELECT COUNT(*) AS total_vehicles
+FROM vehicle_cleaned;
+
+```
+
+-- Top 10 vehicle brands
+SELECT 
+    brand,
+    COUNT(*) AS vehicle_count
+FROM vehicle_cleaned
+GROUP BY brand
+ORDER BY vehicle_count DESC
+LIMIT 10;
+
+-- Vehicle distribution by fuel type
+SELECT 
+    fuel,
+    COUNT(*) AS vehicle_count
+FROM vehicle_cleaned
+GROUP BY fuel
+ORDER BY vehicle_count DESC;
+
+-- Average selling price by fuel type
+SELECT 
+    fuel,
+    ROUND(AVG(selling_price_lakh), 2) AS average_price_lakh
+FROM vehicle_cleaned
+GROUP BY fuel
+ORDER BY average_price_lakh DESC;
+
+-- Average selling price by transmission
+SELECT 
+    transmission,
+    ROUND(AVG(selling_price_lakh), 2) AS average_price_lakh
+FROM vehicle_cleaned
+GROUP BY transmission
+ORDER BY average_price_lakh DESC;
+
+## 7. Power BI Dashboard
+
+An interactive Power BI dashboard was developed to provide a clear overview of the used vehicle market.
+
+### Key Performance Indicators (KPIs)
+
+| KPI | Value |
+|---|---:|
+| Total Vehicles | **3,577** |
+| Average Selling Price | **₹4.74 Lakh** |
+| Average KM Driven | **69,251** |
+| Average Vehicle Age | **13.04 Years** |
+
+### Dashboard Components
+
+- **Top 10 Vehicle Brands by Listings**
+- **Vehicle Distribution by Fuel Type**
+- **Vehicle Age vs Selling Price**
+- **Key Insights Panel**
+- **Year Slicer**
+- **Brand Slicer**
+- **Fuel Type Slicer**
+- **Transmission Slicer**
+- **Owner Slicer**
+- **Seller Type Slicer**
+- **Clear All Filters**
+
+---
+
+## 8. Key Insights
+
+- **Maruti** has the highest number of vehicle listings in the dataset.
+- **Diesel vehicles dominate the dataset with 50.3% share.**
+- **Manual transmission vehicles** are more common than automatic vehicles.
+- **Newer vehicles generally have higher selling prices.**
+- The dashboard provides an interactive way to analyze vehicle characteristics and pricing patterns across different filters.
+
+---
+
+## 9. Power BI Dashboard Preview
+
+### Dashboard
+
+![CarDekho Vehicle Sales Dashboard](Dashboard.png)
+
+The dashboard provides an interactive view of vehicle listings, pricing, fuel distribution, vehicle age, and other important vehicle attributes.
+
+---
+
+## 10. Project Structure
+
+```text
+CarDekho-Vehicle-Sales-Analysis/
+│
+├── Dataset/
+│   └── vehicle_cleaned.csv
+│
+├── Python/
+│   └── CarDekho_Analysis.ipynb
+│
+├── SQL/
+│   └── CarDekho_Analysis.sql
+│
+├── PowerBI/
+│   └── CarDekho_Dashboard.pbix
+│
+├── Screenshots/
+│   └── dashboard.png
+│
+└── README.md
+```
+
+## Conclusion
+
+This project demonstrates a complete **data analytics lifecycle**, including data cleaning, feature engineering, exploratory data analysis, SQL-based analysis, and interactive visualization using Power BI.
+
+The analysis provides useful insights into **vehicle pricing, brand popularity, fuel preferences, transmission types, vehicle age, and usage patterns**.
+
+The project demonstrates practical skills in **Python, SQL, Power BI, data cleaning, data visualization, and business intelligence**, making it suitable for a Data Analyst portfolio.
