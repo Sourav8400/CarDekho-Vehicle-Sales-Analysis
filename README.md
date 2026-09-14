@@ -117,7 +117,7 @@ SELECT COUNT(*) AS total_vehicles
 FROM vehicle_cleaned;
 
 ```
-```
+```sql
 -- Top 10 vehicle brands
 SELECT brand, COUNT(*) AS vehicle_count
 FROM vehicle_cleaned
@@ -126,7 +126,7 @@ ORDER BY vehicle_count DESC
 LIMIT 10;
 ```
 
-```
+```sql
 -- Vehicle distribution by fuel type
 SELECT fuel,COUNT(*) AS vehicle_count
 FROM vehicle_cleaned
@@ -134,14 +134,14 @@ GROUP BY fuel
 ORDER BY vehicle_count DESC;
 ```
 
-```
+```sql
 -- Average selling price by fuel type
 SELECT fuel,ROUND(AVG(selling_price_lakh), 2) AS average_price_lakh
 FROM vehicle_cleaned
 GROUP BY fuel
 ORDER BY average_price_lakh DESC;
 ```
-```
+```sql
 -- Average selling price by transmission
 SELECT transmission,ROUND(AVG(selling_price_lakh), 2) AS average_price_lakh
 FROM vehicle_cleaned
