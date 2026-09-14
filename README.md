@@ -117,7 +117,7 @@ SELECT COUNT(*) AS total_vehicles
 FROM vehicle_cleaned;
 
 ```
-
+```
 -- Top 10 vehicle brands
 SELECT 
     brand,
@@ -126,7 +126,9 @@ FROM vehicle_cleaned
 GROUP BY brand
 ORDER BY vehicle_count DESC
 LIMIT 10;
+```
 
+```
 -- Vehicle distribution by fuel type
 SELECT 
     fuel,
@@ -134,7 +136,9 @@ SELECT
 FROM vehicle_cleaned
 GROUP BY fuel
 ORDER BY vehicle_count DESC;
+```
 
+```
 -- Average selling price by fuel type
 SELECT 
     fuel,
@@ -142,7 +146,8 @@ SELECT
 FROM vehicle_cleaned
 GROUP BY fuel
 ORDER BY average_price_lakh DESC;
-
+```
+```
 -- Average selling price by transmission
 SELECT 
     transmission,
@@ -150,6 +155,7 @@ SELECT
 FROM vehicle_cleaned
 GROUP BY transmission
 ORDER BY average_price_lakh DESC;
+```
 
 ## 7. Power BI Dashboard
 
