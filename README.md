@@ -218,7 +218,7 @@ CarDekho-Vehicle-Sales-Analysis/
 │   └── CarDekho_Dashboard.pbix
 │
 ├── Screenshots/
-│   └── dashboard.png
+│   └── Dashboard.png
 │
 └── README.md
 ```
